@@ -3,6 +3,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import zeroone.developers.billingapp.entity.User;
 
+import java.util.Optional;
+
 public interface UserRepository extends BaseRepository<User, Long> {
 
 
@@ -23,4 +25,7 @@ public interface UserRepository extends BaseRepository<User, Long> {
     @Query(value = "select count(*) > 0 from users u where u.id = :id", nativeQuery = true)
     boolean existsByUserId(@Param("id") Long id);
 
+    // Get User by ID
+    @Query(value = "select * from users u where u.user_id = :userId", nativeQuery = true)
+    Optional<User> findByUserId(@Param("userId") Long userId);
 }

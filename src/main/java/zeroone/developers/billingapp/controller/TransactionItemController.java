@@ -19,7 +19,7 @@ import zeroone.developers.billingapp.service.TransactionItemService;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/transactionItems")
+@RequestMapping("/api/transaction-items")
 public class TransactionItemController {
 
     private final TransactionItemService transactionItemService;

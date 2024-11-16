@@ -19,7 +19,7 @@ import zeroone.developers.billingapp.service.UserPaymentTransactionService;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/userPaymentTransactions")
+@RequestMapping("/api/user-payment-transactions")
 public class UserPaymentTransactionController {
 
     private final UserPaymentTransactionService userPaymentTransactionService;

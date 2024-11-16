@@ -46,7 +46,7 @@ public class UserPaymentTransactionServiceImpl implements UserPaymentTransaction
     public UserPaymentTransactionDto createUserPaymentTransaction(UserPaymentTransactionDto userPaymentTransactionDto) {
         UserPaymentTransaction userPaymentTransaction = dtoToUserPaymentTransaction(userPaymentTransactionDto);
 
-        User user = userRepository.existsByUserId(userPaymentTransaction.getUser().getId())
+        User user = userRepository.findByUserId(userPaymentTransaction.getUser().getId())
                 .orElseThrow(() -> new UserPaymentTransactionException("Such user not found"));
 
         // User balansini tekshirish
