@@ -25,7 +25,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FileDownloadServiceImpl implements FileDownloadService {
 
-
     private final TransactionRepository transactionRepository;
     private final UserPaymentTransactionRepository userPaymentTransactionRepository;
 

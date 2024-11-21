@@ -57,7 +57,7 @@ public class CategoryController {
     @ApiResponse(responseCode = "200", description = "Successfully retrieved the category.")
     @ApiResponse(responseCode = "404", description = "Category not found.")
     @GetMapping("/{id}")
-    public ResponseEntity<CustomApiResponse<CategoryDto>> getRoomById(@PathVariable Long id) {
+    public ResponseEntity<CustomApiResponse<CategoryDto>> getCategoryById(@PathVariable Long id) {
         CategoryDto categoryDto = categoryService.getCategoryById(id)
                 .orElseThrow(() -> new CategoryException("Category not found"));
         return new ResponseEntity<>(new CustomApiResponse<>(

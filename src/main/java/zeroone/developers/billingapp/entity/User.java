@@ -29,7 +29,7 @@ public class User {
 
     @Column(unique = true, nullable = false)
     @Schema(description = "Unique username",
-            example = "john_doe")
+            example = "nizomiddin097")
     private String username;
 
     @Column(nullable = false)

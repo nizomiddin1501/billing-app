@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import zeroone.developers.billingapp.entity.PurchaseRequest;
 import zeroone.developers.billingapp.service.PurchaseService;
+
+import java.util.Arrays;
+
 /**
  * REST controller for managing purchase operations.
  * Provides an endpoint for completing a purchase transaction.
@@ -32,7 +35,7 @@ public class PurchaseController {
     @PostMapping("/complete")
     public ResponseEntity<String> completePurchase(@RequestBody PurchaseRequest purchaseRequest) {
         purchaseService.completePurchase(purchaseRequest.getTransaction(),
-                purchaseRequest.getItems(),
+                Arrays.asList(purchaseRequest.getItems()),
                 purchaseRequest.getPayment());
         return ResponseEntity.ok("Purchase completed successfully");
     }

@@ -6,12 +6,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import zeroone.developers.billingapp.entity.Category;
-import zeroone.developers.billingapp.entity.User;
 import zeroone.developers.billingapp.exceptions.CategoryException;
 import zeroone.developers.billingapp.exceptions.ResourceNotFoundException;
-import zeroone.developers.billingapp.mapper.CategoryMapper;
 import zeroone.developers.billingapp.payload.CategoryDto;
-import zeroone.developers.billingapp.payload.UserDto;
 import zeroone.developers.billingapp.repository.CategoryRepository;
 import zeroone.developers.billingapp.service.CategoryService;
 
